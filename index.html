@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For My Favourite Person ❤️</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at top,#ffd9e8,#f7e9ff 55%,#fff);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#4a2939;display:flex;justify-content:center;align-items:center;padding:20px;overflow:hidden}
+.card{width:min(560px,100%);background:#ffffffed;border-radius:30px;padding:32px 25px;text-align:center;box-shadow:0 25px 80px #8d4b6d30;position:relative;z-index:2}.top{font-size:13px;font-weight:800;letter-spacing:2px;color:#b5527b}.heart{font-size:52px;margin:8px 0;animation:pulse 1.5s infinite}h1{font-size:31px;line-height:1.15;margin:10px 0 14px}.intro{font-size:17px;line-height:1.65;color:#705363}.page{display:none}.page.active{display:block;animation:fade .5s ease}.message{text-align:left;background:#fff7fa;border-radius:22px;padding:22px;margin:20px 0;font-size:16px;line-height:1.75}.message strong{color:#b34d76}.btn{border:0;border-radius:999px;padding:14px 23px;background:#c95783;color:white;font-size:15px;font-weight:800;cursor:pointer;box-shadow:0 9px 24px #c9578340}.dots{margin:18px 0 5px;font-size:12px;color:#a57c8d}.final{font-size:24px;font-weight:800;line-height:1.4}.sub{font-size:15px;line-height:1.7;color:#745464}.float{position:fixed;bottom:-50px;font-size:24px;animation:rise 7s linear infinite;z-index:1;opacity:.7}@keyframes pulse{50%{transform:scale(1.1)}}@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}@keyframes rise{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+</style>
+</head>
+<body>
+<div class="float" style="left:8%;animation-delay:0s">♥</div><div class="float" style="left:24%;animation-delay:2s">♡</div><div class="float" style="left:75%;animation-delay:1s">♥</div><div class="float" style="left:90%;animation-delay:3s">♡</div>
+
+<main class="card">
+<section id="p0" class="page active">
+<div class="top">WAIT. DON'T CLOSE THIS YET.</div><div class="heart">❤️</div>
+<h1>For the girl who somehow became my favourite person</h1>
+<p class="intro">Ye koi normal message nahi hai.<br>Bas thoda sa time de de… meri baat padh lena.</p>
+<button class="btn" onclick="next()">Okay… bol ❤️</button>
+</section>
+
+<section id="p1" class="page">
+<div class="top">FIRST OF ALL…</div>
+<div class="message">Mujhe pata hai aaj tumhara mood thoda off hai. Aur honestly, mujhe ye bhi nahi pata ki tum mujhse naraz ho, mujhse irritate ho, ya bas duniya se break chahiye.<br><br><strong>But I don't need to know the reason to care about you.</strong></div>
+<button class="btn" onclick="next()">Next ❤️</button><div class="dots">1 / 4</div>
+</section>
+
+<section id="p2" class="page">
+<div class="top">AND LISTEN CAREFULLY…</div>
+<div class="message">Tumhara happy version mujhe pasand hai.<br>Tumhara pagal version bhi.<br>Tumhara gussa wala version bhi.<br>Aur woh version bhi jo kisi se baat nahi karna chahta.<br><br><strong>Mujhe tum sirf easy days mein nahi chahiye. Mujhe tum… tumhare difficult days mein bhi chahiye.</strong></div>
+<button class="btn" onclick="next()">Keep reading 🥺</button><div class="dots">2 / 4</div>
+</section>
+
+<section id="p3" class="page">
+<div class="top">ONE CONFESSION…</div>
+<div class="message">Kabhi-kabhi tumse baat na ho toh mujhe realise hota hai ki meri daily life mein tum kitni zyada involved ho.<br><br>Tumhari ek notification.<br>Tumhara ek “hmm”.<br>Tumhara random sa message.<br>Tumhari hasi.<br><br>Chhoti-chhoti cheezein hain… <strong>but somehow they make my day better.</strong></div>
+<button class="btn" onclick="next()">Last one ❤️</button><div class="dots">3 / 4</div>
+</section>
+
+<section id="p4" class="page">
+<div class="top">JUST REMEMBER THIS</div>
+<div class="message">Aaj tumhe kuch prove nahi karna.<br>Na smile karni compulsory hai.<br>Na mujhse baat karna compulsory hai.<br><br>Bas itna yaad rakhna:<br><br><strong>Someone is sitting here, hoping you're okay.<br>Someone is missing your voice.<br>Someone thinks you're incredibly special.<br>And yes… that idiot is me.</strong></div>
+<button class="btn" onclick="finale()">Okay fine… I smiled 🙄❤️</button><div class="dots">4 / 4</div>
+</section>
+
+<section id="p5" class="page">
+<div class="heart">🥹💗</div><div class="final">I KNEW IT.</div>
+<p class="sub">Ab thoda sa gussa kam karo, madam. 😂❤️<br><br>And whenever you feel like talking…<br><strong>I'm right here.</strong></p>
+<div style="font-size:34px">💗 💕 💖 💕 💗</div>
+</section>
+</main>
+<script>
+let n=0;
+function next(){document.getElementById('p'+n).classList.remove('active');n++;document.getElementById('p'+n).classList.add('active')}
+function finale(){next();for(let i=0;i<35;i++){let s=document.createElement('span');s.textContent=['❤️','💕','💗','✨'][Math.floor(Math.random()*4)];s.style.position='fixed';s.style.left='50%';s.style.top='50%';s.style.fontSize=(15+Math.random()*22)+'px';s.style.zIndex=10;s.style.transition='all 1.5s ease-out';document.body.appendChild(s);requestAnimationFrame(()=>{s.style.transform=`translate(${(Math.random()-.5)*500}px,${(Math.random()-.5)*500}px) rotate(${Math.random()*360}deg)`;s.style.opacity=0});setTimeout(()=>s.remove(),1600)}}
+</script>
+</body>
+</html>
